@@ -1,0 +1,90 @@
+{
+  "env": {
+    "es2020": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+  ],
+  "plugins": [
+    "prettier",
+    "react"
+  ],
+  "rules": {
+    "no-alert":"off",
+    "no-plusplus": "off",
+    "no-restricted-globals": "off",
+    "no-undefined": "off",
+    "no-undef": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "radix": [
+      "error",
+      "as-needed"
+    ],
+    "rest-spread-spacing": "error",
+    "semi": "error",
+    "semi-spacing": "error",
+    "semi-style": ["error", "last"],
+    "space-before-blocks": "error",
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ],
+    "space-in-parens": [
+      "error",
+      "never"
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "space-infix-ops": "error",
+    "space-unary-ops": "error",
+    "spaced-comment": "error",
+    "symbol-description": "error",
+    "template-curly-spacing": "error",
+    "yoda": "error",
+    "prettier/prettier": ["error"],
+    "react/jsx-indent":                     [2, 2],
+    "react/jsx-indent-props":               [2, 2],
+    "react/jsx-one-expression-per-line":    [0],
+    "react/prefer-stateless-function":      [1],
+    "react/static-property-placement":      [1, "property assignment"],
+    "react-hooks/rules-of-hooks":           "error",
+    "react-hooks/exhaustive-deps":          "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"], 
+      "parserOptions": {
+        "project": ["./tsconfig.json"] 
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

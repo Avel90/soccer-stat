@@ -1,32 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import './App.css';
-import { Route, Router, Switch } from 'react-router-dom';
+import LeagueList from './pages/LeagueList';
+import LeagueCalendar from './pages/LeagueCalendar';
+import TeamCalendar from './pages/TeamCalendar';
+import CommandList from './pages/CommandList';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <div>
           <Switch>
-            <Route path={'/'} exact>
-              <Start />
+            <Route path="/" exact>
+              <HomePage />
             </Route>
-            <Route path={"/list-lig"}>
-              <ListLig />
+            <Route path="/LeagueList">
+              <LeagueList />
             </Route>
-            <Route path={'/list-command'}>
-              <ListCommand />
+            <Route path="/CommandList">
+              <CommandList />
             </Route>
-            <Route path={'/calendar-lig'}>
-              <CalendarLig />
+            <Route path="/LeagueCalendar">
+              <LeagueCalendar />
             </Route>
-            <Route path={'/calendar-one-command'}>
-              <CalendarOneCommand />
+            <Route path="/TeamCalendar">
+              <TeamCalendar />
             </Route>
-        </Switch>
+          </Switch>
         </div>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
